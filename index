@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Pin‑Ready Blog</title>
+
+  <!-- Open Graph tags – make Pinterest pull the right image/title -->
+  <meta property="og:title" content="Your Pin‑Ready Blog">
+  <meta property="og:description" content="Tips, tutorials, and inspiration for monetising Pinterest.">
+  <meta property="og:image" content="https://<username>.github.io/assets/cover.jpg">
+  <meta property="og:url" content="https://<username>.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Pinterest‑Monetisation Blog</h1>
+  </header>
+
+  <main>
+    <article>
+      <h2>First Post: How to Turn Pins into Traffic</h2>
+      <p>…write your content here…</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 <a href="https://github.com/<username>">Your Name</a></p>
+  </footer>
+</body>
+</html>
