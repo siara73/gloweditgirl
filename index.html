@@ -1,37 +1,188 @@
 # My gloweditgirl Blog
-Initial commit – create README
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ==== BASIC META ==== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Pinterest Blog</title>               <!-- Shown in the browser tab -->
-  <!-- Open Graph tags – help Pinterest pull the right title/image -->
-  <meta property="og:title" content="My Pinterest Blog">
-  <meta property="og:description" content="Tips for monetising Pinterest.">
-  <meta property="og:image" content="https://your‑username.github.io/assets/cover.jpg">
+
+  <!-- ==== PAGE TITLE (appears in the browser tab) ==== -->
+  <title>Spooky‑Season Nail & Beauty Picks – Millie's Picks</title>
+
+  <!-- ==== OPEN GRAPH / RICH PIN TAGS (Pinterest pulls these) ==== -->
+  <meta property="og:title" content="Spooky‑Season Nail & Beauty Picks – Millie's Picks">
+  <meta property="og:description" content="Top Halloween & fall nail‑art tools, colors, and beauty products that actually work – hand‑picked and ready to shop.">
+  <meta property="og:image" content="https://your‑username.github.io/assets/halloween‑nails‑hero.jpg">
+  <meta property="og:url" content="https://your‑username.github.io/">
+  <meta property="og:type" content="website">
+
+  <!-- ==== OPTIONAL TWITTER CARD (nice if you share on X) ==== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spooky‑Season Nail & Beauty Picks – Millie's Picks">
+  <meta name="twitter:description" content="Top Halloween & fall nail‑art tools, colors, and beauty products that actually work – hand‑picked and ready to shop.">
+  <meta name="twitter:image" content="https://your‑username.github.io/assets/halloween‑nails‑hero.jpg">
+
+  <!-- ==== STYLES – keep it simple & mobile‑friendly ==== -->
+  <style>
+    :root {
+      --primary:#ff4500;      /* pumpkin orange */
+      --accent:#6b2c91;       /* deep purple for contrast */
+      --bg:#1a1a1a;
+      --txt:#f5f5f5;
+      --radius:8px;
+    }
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:var(--bg);
+      color:var(--txt);
+      line-height:1.6;
+    }
+    header,footer{
+      text-align:center;
+      padding:1.5rem;
+      background:#111;
+    }
+    header h1{
+      margin:0;
+      font-size:2.2rem;
+      color:var(--primary);
+    }
+    main{
+      max-width:900px;
+      margin:auto;
+      padding:1rem;
+    }
+    .product-card{
+      display:flex;
+      flex-wrap:wrap;
+      background:#222;
+      border-radius:var(--radius);
+      margin:1rem 0;
+      overflow:hidden;
+    }
+    .product-card img{
+      width:100%;
+      max-width:250px;
+      object-fit:cover;
+    }
+    .product-info{
+      flex:1;
+      padding:1rem;
+    }
+    .product-info h2{
+      margin-top:0;
+      color:var(--primary);
+    }
+    .btn{
+      display:inline-block;
+      margin-top:.5rem;
+      padding:.6rem 1.2rem;
+      background:var(--primary);
+      color:#fff;
+      text-decoration:none;
+      border-radius:var(--radius);
+      transition:background .2s;
+    }
+    .btn:hover{
+      background:#e03d00;
+    }
+    .countdown{
+      font-size:1.2rem;
+      margin-top:.5rem;
+      color:#bbb;
+    }
+    @media(max-width:600px){
+      .product-card{
+        flex-direction:column;
+      }
+      .product-card img{
+        max-width:none;
+      }
+    }
+  </style>
+
+  <!-- ==== OPTIONAL: Auto‑redirect script (5‑second timer) ==== -->
+  <script>
+    // Grab the URL parameter ?dest=YOUR_AFFILIATE_LINK
+    const urlParams = new URLSearchParams(window.location.search);
+    const destination = urlParams.get('dest');
+
+    // If a destination is supplied, start a countdown and then redirect
+    if (destination) {
+      const countdownEl = document.createElement('div');
+      countdownEl.className = 'countdown';
+      countdownEl.textContent = 'Redirecting in 5 seconds…';
+      document.body.appendChild(countdownEl);
+
+      let seconds = 5;
+      const interval = setInterval(() => {
+        seconds--;
+        countdownEl.textContent = `Redirecting in ${seconds} second${seconds===1?'':'s'}…`;
+        if (seconds <= 0) {
+          clearInterval(interval);
+          window.location.href = destination;
+        }
+      }, 1000);
+    }
+  </script>
 </head>
+
 <body>
   <header>
-    <h1>Welcome to My Pinterest Blog</h1>
+    <h1>👻 Spooky‑Season Nail & Beauty Picks 👻</h1>
+    <p>Hand‑picked tools, colors, &amp; products for Halloween & fall looks.</p>
   </header>
 
-  <section>
-    <h2>Why Pinterest?</h2>
-    <p>I help creators turn pins into traffic and sales.</p>
-  </section>
+  <main>
+    <!-- ==================== PRODUCT 1 ==================== -->
+    <section class="product-card">
+      <img src="https://your-username.github.io/assets/nail-polish-set.jpg"
+           alt="Halloween nail polish set – orange, black, glitter">
+      <div class="product-info">
+        <h2>Halloween Nail Polish Set – 5 Colors</h2>
+        <p>Rich pigments, long‑lasting formula, perfect for spooky designs.</p>
+        <!-- Replace the # with your real affiliate link -->
+        <a class="btn" href="?dest=https%3A%2F%2Fshareasale.com%2Fr%2F123456%2Fproduct1" target="_blank">
+          Shop Now (Earn 8% commission)
+        </a>
+      </div>
+    </section>
 
-  <section>
-    <h2>Latest Tips</h2>
-    <ul>
-      <li>Use vertical images (2:3 ratio) for higher repins.</li>
-      <li>Write keyword‑rich pin descriptions.</li>
-      <li>Schedule pins with Tailwind or Buffer.</li>
-    </ul>
-  </section>
+    <!-- ==================== PRODUCT 2 ==================== -->
+    <section class="product-card">
+      <img src="https://your-username.github.io/assets/glitter-gel.jpg"
+           alt="Glitter gel top coat – holographic sparkle">
+      <div class="product-info">
+        <h2>Holographic Glitter Gel Top Coat</h2>
+        <p>Add a magical shine that catches the light on every movement.</p>
+        <a class="btn" href="?dest=https%3A%2F%2Fimpact.com%2Faffiliate%2Fproduct2" target="_blank">
+          Grab It (Earn 10% commission)
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== PRODUCT 3 ==================== -->
+    <section class="product-card">
+      <img src="https://your-username.github.io/assets/skin-serum.jpg"
+           alt="Fall‑season skin serum – vitamin C & hyaluronic acid">
+      <div class="product-info">
+        <h2>Vitamin C + Hyaluronic Acid Serum</h2>
+        <p>Brighten dull autumn skin and keep it hydrated for weeks.</p>
+        <a class="btn" href="?dest=https%3A%2F%2Fcj.com%2Ftrack%2Fproduct3" target="_blank">
+          Buy Now (Earn 12% commission)
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== CALL‑TO‑ACTION ==================== -->
+    <section style="text-align:center; margin-top:2rem;">
+      <p>💡 Want more spooky‑season ideas? <a href="https://www.pinterest.com/millie/pins/" target="_blank">Follow my Pinterest board</a> for daily inspiration.</p>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Millie – <a href="mailto:millie@example.com">Contact me</a></p>
+    <p>© 2025 Millie – All affiliate links are disclosed. <a href="https://github.com/your-username/your-username.github.io" target="_blank">View source on GitHub</a></p>
   </footer>
 </body>
 </html>
